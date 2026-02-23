@@ -4,6 +4,7 @@ $json = @file_get_contents('profile.json');
 $data = $json ? json_decode($json, true) : [];
 $name = isset($data['name']) ? $data['name'] : 'Neznámý uživatel';
 $skills = isset($data['skills']) && is_array($data['skills']) ? $data['skills'] : [];
+$projects = isset($data['projects']) && is_array($data['projects']) ? $data['projects'] : [];
 ?>
 <!doctype html>
 <html lang="cs">
@@ -28,6 +29,18 @@ $skills = isset($data['skills']) && is_array($data['skills']) ? $data['skills'] 
         </ul>
       <?php else: ?>
         <p>Žádné dovednosti nebyly uvedeny.</p>
+      <?php endif; ?>
+    </section>
+    <section>
+      <h2>Projekty / Zájmy</h2>
+      <?php if (!empty($projects)): ?>
+        <ul>
+          <?php foreach ($projects as $p): ?>
+            <li><?php echo htmlspecialchars($p); ?></li>
+          <?php endforeach; ?>
+        </ul>
+      <?php else: ?>
+        <p>Žádné projekty nebo zájmy nebyly uvedeny.</p>
       <?php endif; ?>
     </section>
   </main>
