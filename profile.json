@@ -1,15 +1,15 @@
 {
-  "name": "Marek Novák",
-  "skills": [
-    "PHP",
-    "HTML",
-    "CSS",
-    "Git",
-    "SQL"
-  ],
-  "projects": [
-    "Webová prezentace",
-    "API pro správu úloh",
-    "Interní nástroj pro import dat"
-  ]
+    "name": "Marek Novák",
+    "skills": [
+        "PHP",
+        "HTML",
+        "CSS",
+        "Git",
+        "SQL"
+    ],
+    "projects": [
+        "Webová prezentace",
+        "API pro správu úloh",
+        "Interní nástroj pro import dat"
+    ]
 }
